@@ -1,4 +1,5 @@
 tabpy 
+tabpy-server
 scikit-learn
 pandas
 numpy
