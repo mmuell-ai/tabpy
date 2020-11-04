@@ -1,6 +1,6 @@
 from tabpy.tabpy_tools.client import Client
 
-client = Client('http://tabpy-git-tabpy.apps.ocp1.vwoa.na.vwg:8080/')
+client = Client('http://localhost:8080/')
 def clustering(x, y):
     import numpy as np
     from sklearn.cluster import DBSCAN
