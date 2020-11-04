@@ -1,3 +1,3 @@
 tabpy --config=openshift.conf
-tabpy-deploy-models
+tabpy-deploy-models --config=openshift.conf
 python dbscan
