@@ -1,5 +1,6 @@
-from tabpy.models.utils import setup_utils
+from tabpy.tabpy_tools.client import Client
 
+client = Client('http://tabpy-git-tabpy.apps.ocp1.vwoa.na.vwg:8080/')
 def clustering(x, y):
     import numpy as np
     from sklearn.cluster import DBSCAN
@@ -10,7 +11,9 @@ def clustering(x, y):
     return db.labels_.tolist()
 
 if __name__ == "__main__":
-    setup_utils.deploy_model('clustering',
-              clustering,
-              'Returns cluster Ids for each data point specified by the '
-              'pairs in x and y')
+    client.deploy(
+        'clustering',
+        clustering,
+        'Returns cluster Ids for each data point specified by the '
+        'pairs in x and y'
+    )
